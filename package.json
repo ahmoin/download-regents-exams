@@ -1,0 +1,29 @@
+{
+  "name": "download-regents-exams",
+  "version": "1.0.0",
+  "description": "Downloads all regents exams given url using Puppeteer and Axios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsanmoin05/download-regents-exams.git"
+  },
+  "keywords": [
+    "regents",
+    "download",
+    "pdfs"
+  ],
+  "author": "Ahsan Moin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahsanmoin05/download-regents-exams/issues"
+  },
+  "homepage": "https://github.com/ahsanmoin05/download-regents-exams#readme",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "puppeteer": "^21.7.0"
+  }
+}
