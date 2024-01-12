@@ -46,14 +46,17 @@ import path from "path";
         !pdfLink.includes("examlt") &&
         !pdfLink.includes("ltexam")
       ) {
-        const pdfResponse = await axios({
-          method: "get",
-          url: pdfLink,
-          responseType: "arraybuffer",
-        });
-
-        fs.writeFileSync(path.join(folderPath, pdfFileName), pdfResponse.data);
-        console.log(pdfFileName + " successfully downloaded");
+        axios
+          .get(pdfLink, {
+            responseType: "arraybuffer",
+          })
+          .then(function (pdfResponse) {
+            fs.writeFileSync(
+              path.join(folderPath, pdfFileName),
+              pdfResponse.data
+            );
+            console.log(pdfFileName + " successfully downloaded");
+          });
       }
     }
   }
